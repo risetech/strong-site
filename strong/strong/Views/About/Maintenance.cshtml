@@ -1,0 +1,76 @@
+﻿@{
+	ViewBag.Title = "Технический надзор";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="slides-canvas">
+	<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/09/background-about-us_3236_20110929.jpg.1200x800_q85_box-0%2C0%2C1000%2C1000_crop_detail.jpg">
+</div>
+<div id="content-canvas">
+	<div class="home-canvas">
+		@Html.Partial("_AboutNavigationPartial")
+		<div class="sub-canvas">
+			<div class="sub-content-canvas">
+				<div class="sub-content">
+					<div class="sub-content-main">
+						<div class="accordion-group">
+							<div class="accordion-body">
+								<div class="accordion-inner">
+									<h2>Задачи и функции строительного контроля</h2>
+									<p>
+										Задачей строительного контроля является проверка соответствия выполняемых работ
+проектно-сметной документации, требованиям технических регламентов, строительных норм
+и правил.<br />
+										<br />
+										Основными функциями ООО «Стройнефтегаз» при осуществлении строительного контроля
+являются:
+									</p>
+									<ul>
+										<li>проверка готовности подрядной организации к реализации целей проекта</li>
+										<li>контроль качества применяемых материалов, изделий и оборудования</li>
+										<li>постоянный контроль за качеством строительно-монтажных работ</li>
+										<li>контроль полноты и качества оформления исполнительной документации</li>
+										<li>приемка и подтверждение объемов выполненных строительно-монтажных работ</li>
+										<li>участие в работе комиссий по приемке объектов в эксплуатацию</li>
+									</ul>
+								</div>
+							</div>
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" href="#employees-collapse"><span>Квалификация персонала&nbsp</span><i class="icon-chevron-down"></i></a>
+							</div>
+							<div id="employees-collapse" class="accordion-body collapse">
+								<div class="accordion-inner">
+									<ul>
+										<li>высшее специальное образование</li>
+										<li>стаж работы по специальности свыше трёх лет</li>
+										<li>аттестация на право выполнения работ по строительному контролю</li>
+										<li>аттестация в соответствии с требованиями Национального агентства контроля и сварки
+(НАКС) специалистов сварочного производства II, III, IV уровней</li>
+										<li>аттестация специалистов по неразрушающему контролю сварных соединений I, II, III
+уровней на ВИК, РК, УЗК, МК, ПВК, ПВТ</li>
+										<li>аттестация по промышленной безопасности А, Б1, Б2, Б4, Б7, Б8, Б9, Г1</li>
+										<li>аттестация по электробезопасности I-V группы, охране труда, пожарной безопасности</li>
+									</ul>
+								</div>
+							</div>
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" href="#tech-collapse"><span>Техническая оснащенность&nbsp</span><i class="icon-chevron-down"></i></a>
+							</div>
+							<div id="tech-collapse" class="accordion-body collapse">
+								<div class="accordion-inner">
+									<ul>
+										<li>поверенные комплекты средств визуально-измерительного контроля</li>
+										<li>электронное геодезическое оборудование</li>
+										<li>оборудование для неразрушающего контроля сварных соединений и изоляции</li>
+										<li>комплекты оргтехники</li>
+										<li>автотранспорт</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					@Html.Partial("_SideBarPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

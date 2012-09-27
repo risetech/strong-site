@@ -1,0 +1,28 @@
+﻿@{
+	ViewBag.Title = "Деятельность";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="slides-canvas">
+	<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/09/background-about-us_3236_20110929.jpg.1200x800_q85_box-0%2C0%2C1000%2C1000_crop_detail.jpg">
+</div>
+<div id="content-canvas">
+	<div class="home-canvas">
+		@Html.Partial("_AboutNavigationPartial")
+		<div class="sub-canvas">
+			<div class="sub-content-canvas">
+				<div class="sub-content">
+					<div class="sub-content-main">
+						<h2>Сферы деятельности предприятия</h2>
+						<ul>
+							<li>объекты гражданского строительства</li>
+							<li>объекты нефтегазового комплекса</li>
+							<li>объекты автотранспортной системы</li>
+							<li>объекты соцкультбыта и спортивных сооружений</li>
+						</ul>
+					</div>
+					@Html.Partial("_SideBarPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,74 @@
+﻿@{
+	ViewBag.Title = "Сертификаты";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="modal hide fade" id="modal-certificate">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3></h3>
+	</div>
+	<div class="modal-body">
+	</div>
+	<div class="modal-footer">
+		<button data-dismiss="modal" class="btn">Закрыть</button>
+	</div>
+</div>
+<div id="slides-canvas">
+	<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/09/background-about-us_3236_20110929.jpg.1200x800_q85_box-0%2C0%2C1000%2C1000_crop_detail.jpg">
+</div>
+<div id="content-canvas">
+	<div class="home-canvas">
+		@Html.Partial("_InformationNavigationPartial")
+		<div class="sub-canvas">
+			<div class="sub-content-canvas">
+				<div class="sub-content">
+					<div class="sub-content-main">
+						<ul class="thumbnails" id="certificates-big">
+							<li>
+								<a title="Лицензия1" data-index="1" href="javascript:;" class="thumbnail">
+									<img src="http://www.sng.perm.ru/big/se.jpg" />
+								</a>
+							</li>
+							<li>
+								<a title="Лицензия2" data-index="2" href="javascript:;" class="thumbnail">
+									<img src="http://www.sng.perm.ru/big/lc.jpg" />
+								</a>
+							</li>
+							<li>
+								<a title="Лицензия3" data-index="3" href="javascript:;" class="thumbnail">
+									<img src="http://www.sng.perm.ru/big/lcp.jpg" />
+								</a>
+							</li>
+							<li>
+								<a title="Лицензия4" data-index="4" href="javascript:;" class="thumbnail">
+									<img src="http://www.sng.perm.ru/big/sv.jpg" />
+								</a>
+							</li>
+							<li>
+								<a title="Лицензия5" data-index="5" href="javascript:;" class="thumbnail">
+									<img src="http://www.sng.perm.ru/big/lci.jpg" />
+								</a>
+							</li>
+							<li>
+								<a title="Лицензия6" data-index="6" href="javascript:;" class="thumbnail">
+									<img src="http://www.sng.perm.ru/big/se.jpg" />
+								</a>
+							</li>
+						</ul>
+					</div>
+					@Html.Partial("_SideBarPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function () {
+		var index = location.hash.substring(1);
+		if (index) {
+			showCertificateModal($('a[data-index=' + index + ']'));
+			history.pushState('', document.title, window.location.pathname);
+			e.preventDefault();
+		}
+	});
+</script>

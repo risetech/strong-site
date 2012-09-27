@@ -1,0 +1,64 @@
+﻿@{
+	ViewBag.Title = "Реквизиты";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="slides-canvas">
+	<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/08/000_bg_29_3133_20110822.jpg.1200x800_q85_box-63%2C0%2C913%2C850_crop_detail.jpg">
+</div>
+<div id="content-canvas">
+	<div class="home-canvas">
+		@Html.Partial("_InformationNavigationPartial")
+		<div class="sub-canvas">
+			<div class="sub-content-canvas">
+				<div class="sub-content">
+					<div class="sub-content-main">
+						<table class="table">
+							<tr>
+								<td>Полное наименование/ правовой (юридический) статус</td>
+								<td>Общество с ограниченной ответственностью "Стройнефтегаз"</td>
+							</tr>
+							<tr>
+								<td>Сокращённое наименование</td>
+								<td>ООО "Стронг"</td>
+							</tr>
+							<tr>
+								<td>Юридический адрес</td>
+								<td>Россия, 614010, г. Пермь, ул. Героев Хасана, 7а</td>
+							</tr>
+							<tr>
+								<td>Руководитель предприятия</td>
+								<td>Директор - Антонов Игорь Николаевич</td>
+							</tr>
+							<tr>
+								<td>ИНН</td>
+								<td>5904145175</td>
+							</tr>
+							<tr>
+								<td>КПП</td>
+								<td>590401001</td>
+							</tr>
+							<tr>
+								<td>Р/с</td>
+								<td>407 028 101 000 000 023 77 в ОАО АКБ "Урал ФД"</td>
+							</tr>
+							<tr>
+								<td>К/с</td>
+								<td>301 018 108 000 000 007 90</td>
+							</tr>
+							<tr>
+								<td>БИК</td>
+								<td>045773790</td>
+							</tr>
+							<tr>
+								<td>ОГРН</td>
+								<td>1065904114429</td>
+							</tr>
+						</table>
+					</div>
+					@Html.Partial("_SideBarPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

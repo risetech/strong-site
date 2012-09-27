@@ -1,0 +1,43 @@
+﻿@{
+	ViewBag.Title = "Вакансии";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="slides-canvas">
+	<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/08/000_bg_29_3133_20110822.jpg.1200x800_q85_box-63%2C0%2C913%2C850_crop_detail.jpg">
+</div>
+<div id="content-canvas">
+	<div class="home-canvas">
+		@Html.Partial("_InformationNavigationPartial")
+		<div class="sub-canvas">
+			<div class="sub-content-canvas">
+				<div class="sub-content">
+					<div class="sub-content-main">
+						<h2>Обществу с ограниченной ответственностью "Стройнефтегаз" на постоянную работу требуются следующие специалисты:</h2>
+						<ol>
+							<li>Инженеры с высшим техническим образованием (опыт работы в строительстве желателен)</li>
+							<li>Геодезисты </li>
+							<li>Дефектоскописты </li>
+							<li>Лаборанты дорожно-строительной лаборатории</li>
+						</ol>
+						<p>
+							Отправить заявку вы можете по адресу sng@perm.ru, либо связаться с нами по телефону в Перми:
+					<br />
+							+7 (342) 244-04-44 
+					<strong>В заявке указать:</strong>
+						</p>
+						<ul>
+							<li>Кем бы Вы хотели работать на нашем предприятии (выбор из предложенных вакансий)</li>
+							<li>Возраст</li>
+							<li>Образование (с указанием института, факультета, даты получения диплома)</li>
+							<li>Стаж работы (сколько и где работали)</li>
+							<li>Владение компьютерными программами (перечислить)</li>
+							<li>Дополнительная информация</li>
+						</ul>
+					</div>
+					@Html.Partial("_SideBarPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
