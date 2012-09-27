@@ -1,4 +1,9 @@
-﻿body {
+﻿@font-face {
+	font-family: 'Permian';
+	src: url('/Content/fonts/PERMIANSANSTYPEFACE.otf');
+}
+
+body {
 	/*font-size: .85em;*/
 	font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
 	color: #1a1a1a;
@@ -131,10 +136,11 @@ textarea {
 
 	#navigation-header li {
 		border-right: solid black 1px;
-		width: 162px;
+		width: 140px;
 	}
 
-		#navigation-header li:last-child {
+		#navigation-header li:last-child,
+		#navigation-header li:nth-child(4) {
 			border-right: none;
 		}
 
@@ -278,8 +284,7 @@ textarea {
 	background: linear-gradient(to bottom, rgba(254,255,253,1) 0%,rgba(247,249,245,1) 40%,rgba(237,240,236,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefffd', endColorstr='#edf0ec',GradientType=0 ); /* IE6-9 */
 	overflow: hidden;
-	border-bottom: 8px solid white;
-	height: 115px;
+	height: 130px;
 	box-shadow: inset 0px -5px 18px gray;
 }
 
@@ -309,6 +314,7 @@ textarea {
 	/*border-right: 1px solid #D5D5D5;*/
 	border-left: 1px solid #D5D5D5;
 	height: 100%;
+	position: relative;
 }
 
 	.home-teaser h2 {
@@ -334,6 +340,28 @@ textarea {
 		padding-right: 5px;
 		color: #575757;
 	}
+
+.teaser-image-container {
+	background: url('img/Map_of_russia_GREY.png') no-repeat;
+	position: absolute;
+	top: 20px;
+	left: 70px;
+	width: 173px;
+	height: 100px;
+}
+.home-teaser:nth-child(2):hover {
+	cursor: pointer;
+}
+
+
+.home-teaser:nth-child(2):hover .teaser-image-container {
+	background: url('img/Map_of_russia.png') no-repeat;
+}
+
+.home-teaser:nth-child(2):hover a {
+	color: #51c6e8;
+	text-decoration: none;
+}
 
 #home-widgets {
 	height: 169px;
@@ -365,7 +393,7 @@ textarea {
 
 #slideshow-controls {
 	position: absolute;
-	bottom: 20px;
+	bottom: 10px;
 	z-index: 200;
 	left: 30px;
 	padding: 15px;
@@ -585,7 +613,7 @@ textarea {
 	margin-bottom: 10px;
 	width: 65%;
 	padding: 0 15px;
-	min-height: 330px;
+	min-height: 265px;
 	padding-top: 8px;
 }
 
@@ -673,24 +701,25 @@ textarea {
 }
 
 .switcher {
-	width: 20px;
+	width: 33px;
 	height: 40px;
-	opacity: 0.8;
 	position: absolute;
-	height: 40px;
+	height: 68px;
 	top: 40px;
 	overflow: hidden;
 	z-index: 102;
+	background-repeat: no-repeat;
+	background-position-x: -2px;
 }
 
 	.switcher.left {
-		background-image: url('img/arrow_white_left.png');
-		right: 10px;
+		background-image: url('img/arrow_white_left_bigger.png');
+		right: 4px;
 	}
 
 	.switcher.right {
-		background-image: url('img/arrow_white_right.png');
-		right: -21px;
+		background-image: url('img/arrow_white_right_bigger.png');
+		right: -27px;
 	}
 
 	.switcher:hover {
@@ -860,7 +889,24 @@ textarea {
 	left: 300px;
 	color: white;
 	width: 64%;
+	/*font-family: 'Permian';*/
 }
+
+	.caption-inner h2 {
+		font-size: 26px;
+		margin-bottom: 0;
+		/*font-weight: normal;*/
+	}
+
+	.caption-inner h4 {
+		margin-top: 4px;
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	.caption-inner a {
+		float: right;
+	}
 
 /*.caption-inner-more a:hover {
 		color: #51c6e8;
@@ -890,3 +936,50 @@ textarea {
 		.project-name a:hover {
 			text-decoration: none;
 		}
+
+	.project-name span {
+		margin-right: 10px;
+	}
+
+.btn-custom {
+	font-size: 11px;
+	margin-top: 0 !important;
+	background-color: #ED9D2C;
+	background-image: -moz-linear-gradient(top,#f36206,#8f2a01);
+	background-image: -ms-linear-gradient(top,#f36206,#8f2a01);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#f36206),to(#8f2a01));
+	background-image: -webkit-linear-gradient(top,#f36206,#8f2a01);
+	background-image: -o-linear-gradient(top,#f36206,#8f2a01);
+	background-image: linear-gradient(top,#f36206,#8f2a01);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f36206',endColorstr='#8f2a01',GradientType=0);
+	/*border-color: #8f2a01 #8f2a01 #8C4602;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/
+	color: white !important;
+	padding: 5px 10px 5px !important;
+	line-height: 14px;
+	display: inline-block;
+	*display: inline;
+	/* IE7 inline-block hack */
+	*zoom: 1;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+	*background-color: #e6e6e6;
+	/* Darken IE7 buttons by default so they stand out more given they won't have borders */
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	*margin-left: .3em;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+btn-custom:hover {
+	background-color: #8f2a01;
+}

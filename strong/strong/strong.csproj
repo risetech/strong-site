@@ -134,14 +134,24 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\img\arrow_white_left.png" />
+    <Content Include="Content\img\arrow_white_left_bigger.png" />
     <Content Include="Content\img\arrow_white_right.png" />
+    <Content Include="Content\img\arrow_white_right_bigger.png" />
     <Content Include="Content\img\background-dot2.png" />
     <Content Include="Content\img\background-the-environment_20110822.jpg.1200x800_q85_box-280,100,1000,820_crop_detail.jpg" />
+    <Content Include="Content\img\Dekelia-1_small.jpg" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
     <Content Include="Content\img\logo_1.jpg" />
     <Content Include="Content\img\background-dot.png" />
+    <Content Include="Content\img\Map_of_Russia.png" />
+    <Content Include="Content\img\Map_of_Russia_GREY.png" />
+    <Content Include="Content\img\picpic.jpeg" />
+    <Content Include="Content\img\shv-full-small.jpg" />
+    <Content Include="Content\img\smallpic.jpg" />
     <Content Include="Content\nord-style.css" />
+    <Content Include="Content\img\pic_small.jpg" />
+    <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -198,6 +208,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Fonts\PERMIANSERIFTYPEFACE.OTF" />
+    <Content Include="Content\Fonts\PERMIANSANSTYPEFACE.OTF" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\App.js" />
     <Content Include="Scripts\bootstrap-all.js" />
@@ -246,6 +258,9 @@
     <Content Include="Views\About\Attestation.cshtml" />
     <Content Include="Views\Information\Certificates.cshtml" />
     <Content Include="Views\Shared\_SideBarPartial.cshtml" />
+    <Content Include="Views\Shared\_AboutBackgroundPartial.cshtml" />
+    <Content Include="Views\Shared\_InformationBackgroundPartial.cshtml" />
+    <Content Include="Views\Shared\_ProjectsBackgroundPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,9 +2,7 @@
 	ViewBag.Title = "История компании";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div id="slides-canvas">
-	<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/08/000_bg_29_3133_20110822.jpg.1200x800_q85_box-63%2C0%2C913%2C850_crop_detail.jpg">
-</div>
+@Html.Partial("_InformationBackgroundPartial");
 <div id="content-canvas">
 	<div class="home-canvas">
 		@Html.Partial("_InformationNavigationPartial")

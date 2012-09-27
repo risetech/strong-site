@@ -2,9 +2,7 @@
 	ViewBag.Title = "Экспертиза промышленной безопасности";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div id="slides-canvas">
-	<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/09/background-about-us_3236_20110929.jpg.1200x800_q85_box-0%2C0%2C1000%2C1000_crop_detail.jpg">
-</div>
+@Html.Partial("_AboutBackgroundPartial");
 <div id="content-canvas">
 	<div class="home-canvas">
 		@Html.Partial("_AboutNavigationPartial")

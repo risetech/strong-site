@@ -2,9 +2,7 @@
 	ViewBag.Title = "Проекты";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div id="slides-canvas">
-	<img src="~/Content/img/background-the-environment_20110822.jpg.1200x800_q85_box-280,100,1000,820_crop_detail.jpg" />
-</div>
+@Html.Partial("_ProjectsBackgroundPartial");
 <div id="content-canvas" data-spy="scroll" data-target=".sub-navigation">
 	<div class="home-canvas">
 		@Html.Partial("_ProjectsNavigationPartial")
