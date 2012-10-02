@@ -67,31 +67,33 @@ function renderRandomImages(array, $jqObject, amount) {
 	});
 }
 
-//some shit there
+//
 
-$(function () {
+//$(function () {
 
-	var w = $(window);
+//	var w = $(window);
 
-	// add a custom ":inView" selector
-	$.expr[':'].inView = function (obj) {
-		var $this = $(obj);
-		var relY = $this.offset().top - w.scrollTop();
-		return relY >= 0 && relY <= w.height();
-	};
+//	// add a custom ":inView" selector
+//	$.expr[':'].inView = function (obj) {
+//		var $this = $(obj);
+//		var relY = $this.offset().top - w.scrollTop();
+//		return relY >= 0 && relY <= w.height();
+//	};
 
-	$.fn.visibilityChange = function (fun) {
-		return this.each(function () {
-			var elem = $(this);
-			var pVisible = elem.is(":inView");
-			$(document).scroll(function (e) {
-				if (pVisible != elem.is(":inView")) {
-					pVisible = !pVisible;
-					fun(pVisible);
-				}
-			});
-		});
-	};
+//	$.fn.visibilityChange = function (fun) {
+//		return this.each(function () {
+//			var elem = $(this);
+//			var pVisible = elem.is(":inView");
+//			$(document).scroll(function (e) {
+//				if (pVisible != elem.is(":inView")) {
+//					pVisible = !pVisible;
+//					fun(pVisible);
+//				}
+//			});
+//		});
+//	};
+
+//	//
 
 	//modals for certificates
 	$('#certificates-big a').click(function () {
@@ -212,9 +214,10 @@ $(function () {
 
 	//collapse on navigation click
 	$('#sub-navigation-projects ul li a').click(function () {
-		//$(this).parent('li').addClass('active');
 		var $targetCollapseElement = $($(this).attr('href') + '-collapse')
-		$targetCollapseElement.collapse('show');
+		if (!$targetCollapseElement.hasClass('in')) {
+			$targetCollapseElement.collapse('show');
+		}
 	});
 
 });
