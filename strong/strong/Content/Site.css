@@ -246,7 +246,7 @@ textarea {
 	top: 61px;
 	position: fixed;
 	width: 100%;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .home-canvas {
@@ -293,20 +293,27 @@ textarea {
 }
 
 	.thumbnails-tiny > li {
-		width: 45px;
 		margin-left: 20px;
 	}
 
 	.thumbnails-tiny a {
-		border: 1px solid grey;
+		border: 1px solid #CCC;
 		padding: 1px;
 	}
 
 		.thumbnails-tiny a:hover {
 			-webkit-box-shadow: 0px 0px 8px 3px rgba(227, 89, 0, 0.5);
 			box-shadow: 0px 0px 8px 3px rgba(227, 89, 0, 0.5);
-			border: 1px solid grey;
+			border: 1px solid #CCC;
 		}
+
+#certificates > li {
+	width: 40px;
+}
+
+#partners-logos {
+	margin-left: -38px;
+}
 
 .home-teaser {
 	width: 301px;
@@ -320,7 +327,7 @@ textarea {
 	.home-teaser h2 {
 		margin: 0;
 		margin-left: 30px;
-		margin-top: 5px;
+		margin-top: 3px;
 		font-size: 100%;
 	}
 
@@ -341,27 +348,28 @@ textarea {
 		color: #575757;
 	}
 
-.teaser-image-container {
-	background: url('img/Map_of_russia_GREY.png') no-repeat;
+#map-image {
+	background: url('img/Map_of_russia.png') no-repeat;
 	position: absolute;
 	top: 20px;
 	left: 70px;
 	width: 173px;
 	height: 100px;
 }
+
+.home-teaser:nth-child(2) h2 {
+	color: #f36206;
+}
+
 .home-teaser:nth-child(2):hover {
 	cursor: pointer;
 }
 
+	.home-teaser:nth-child(2):hover #map-image {
+		background: url('img/Map_of_russia_darkblue.png') no-repeat;
+	}
 
-.home-teaser:nth-child(2):hover .teaser-image-container {
-	background: url('img/Map_of_russia.png') no-repeat;
-}
 
-.home-teaser:nth-child(2):hover a {
-	color: #51c6e8;
-	text-decoration: none;
-}
 
 #home-widgets {
 	height: 169px;
@@ -462,35 +470,6 @@ textarea {
 	position: relative;
 	width: 20px;
 	height: 20px;
-	background-color: white;
-}
-
-.partner-images {
-	text-align: center;
-}
-
-.partner-image {
-	height: 85px;
-	width: 114px;
-	background-color: white;
-	float: left;
-	opacity: 0.8;
-	-webkit-transition: all .2s linear;
-	-moz-transition: all .2s linear;
-	transition: all .5s linear;
-}
-
-	.partner-image:hover {
-		opacity: 1;
-		cursor: pointer;
-	}
-
-#presence-map {
-	width: 452px;
-}
-
-#partners {
-	width: 457px;
 	background-color: white;
 }
 
@@ -701,7 +680,7 @@ textarea {
 }
 
 .switcher {
-	width: 33px;
+	width: 32px;
 	height: 40px;
 	position: absolute;
 	height: 68px;
@@ -709,23 +688,52 @@ textarea {
 	overflow: hidden;
 	z-index: 102;
 	background-repeat: no-repeat;
-	background-position-x: -2px;
 }
 
 	.switcher.left {
 		background-image: url('img/arrow_white_left_bigger.png');
 		right: 4px;
+		background-position-x: -2px;
 	}
 
 	.switcher.right {
 		background-image: url('img/arrow_white_right_bigger.png');
 		right: -27px;
+		background-position-x: 0px;
 	}
 
 	.switcher:hover {
 		cursor: pointer;
 		opacity: 1;
 	}
+
+.switcher-arrow {
+	height: 68px;
+	background: no-repeat;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	transition: all .5s linear;
+}
+
+	.switcher-arrow.left {
+		background-image: url('img/small_arrow_left_hinted.png');
+		background-position: 13px 17px;
+		width: 28px;
+	}
+
+		.switcher-arrow.left:hover {
+			background-image: url('img/small_arrow_left.png');
+		}
+
+	.switcher-arrow.right {
+		background-image: url('img/small_arrow_right_hinted.png');
+		background-position: 3px 17px;
+	}
+
+		.switcher-arrow.right:hover {
+			background-image: url('img/small_arrow_right.png');
+		}
+
 
 #footer-hovers {
 	position: relative;
@@ -938,24 +946,29 @@ textarea {
 		}
 
 	.project-name span {
-		margin-right: 10px;
+		/*margin-right: 10px;*/
 	}
 
 .btn-custom {
 	font-size: 11px;
 	margin-top: 0 !important;
-	background-color: #ED9D2C;
-	background-image: -moz-linear-gradient(top,#f36206,#8f2a01);
-	background-image: -ms-linear-gradient(top,#f36206,#8f2a01);
-	background-image: -webkit-gradient(linear,0 0,0 100%,from(#f36206),to(#8f2a01));
-	background-image: -webkit-linear-gradient(top,#f36206,#8f2a01);
-	background-image: -o-linear-gradient(top,#f36206,#8f2a01);
-	background-image: linear-gradient(top,#f36206,#8f2a01);
+	/*background-color: #ED9D2C;*/
+	background-color: #8f2a01!important;
 	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f36206',endColorstr='#8f2a01',GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f36206", endColorstr="#8f2a01");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#f36206), to(#8f2a01));
+	background-image: -moz-linear-gradient(top, #f36206, #8f2a01);
+	background-image: -ms-linear-gradient(top, #f36206, #8f2a01);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f36206), color-stop(100%, #8f2a01));
+	background-image: -webkit-linear-gradient(top, #f36206, #8f2a01);
+	background-image: -o-linear-gradient(top, #f36206, #8f2a01);
+	background-image: linear-gradient(#f97f33, #8f2a01);
+	border-color: #8f2a01;
+	color: #fff !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+	-webkit-font-smoothing: antialiased;
 	/*border-color: #8f2a01 #8f2a01 #8C4602;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/
-	color: white !important;
 	padding: 5px 10px 5px !important;
 	line-height: 14px;
 	display: inline-block;
@@ -966,20 +979,16 @@ textarea {
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
-	*background-color: #e6e6e6;
 	/* Darken IE7 buttons by default so they stand out more given they won't have borders */
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
 	*margin-left: .3em;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-btn-custom:hover {
-	background-color: #8f2a01;
-}
+	.btn-custom:hover {
+		background-position: 0 -5px;
+		/*background-image: -moz-linear-gradient(bottom,#f36206,#8f2a01);
+		background-image: -ms-linear-gradient(bottom,#f36206,#8f2a01);
+		background-image: -webkit-gradient(linear,0 0,0 100%,from(#f36206),to(#8f2a01));
+		background-image: -webkit-linear-gradient(bottom,#f36206,#8f2a01);
+		background-image: -o-linear-gradient(bottom,#f36206,#8f2a01);
+		background-image: linear-gradient(bottom,#f36206,#8f2a01);*/
+	}

@@ -19,7 +19,9 @@
 </div>
 <div id="content-canvas">
 	<div class="home-canvas" id="home-canvas-main">
-		<div class="switcher left"></div>
+		<div class="switcher left">
+			<div class="switcher-arrow left"></div>
+		</div>
 		<div id="home">
 			<div id="home-slideshow">
 				<div id="slideshow-controls">
@@ -68,18 +70,19 @@
 					<a href="~/Information/Certificates">
 						<h2>Лицензии и сертификаты</h2>
 					</a>
-					<ul class="thumbnails thumbnails-tiny">
+					<ul id="certificates" class="thumbnails thumbnails-tiny">
 					</ul>
 				</div>
-				<div class="home-teaser">
-					<a href="#"><h2>Наша география</h2></a>
-					<div class="teaser-image-container"></div>
+				<div class="home-teaser" onclick="document.location.href='/'">
+					<h2>Наша география</h2>
+					<div id="map-image"></div>
 				</div>
 				<div class="home-teaser">
 					<a href="#">
 						<h2>Наши партнеры</h2>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 					</a>
+					<ul id="partners-logos" class="thumbnails thumbnails-tiny">
+					</ul>
 				</div>
 			</div>
 			@*<div id="home-widgets">
@@ -109,6 +112,7 @@
 </div>
 <script>
 	$(function () {
-		renderRandomCertificates();
+		renderRandomImages(certificates, $('#certificates'), 4);
+		renderRandomImages(partnersLogos, $('#partners-logos'), 3);
 	});
 </script>

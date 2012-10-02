@@ -30,27 +30,68 @@ function showCertificateModal(sender) {
 	$('#modal-certificate').modal();
 }
 
-//array of <li>
 var certificates = [
-	$('<li><a class="thumbnail" href="/Information/Certificates#1"><img src="http://www.sng.perm.ru/big/se.jpg" /></a></li>'),
-	$('<li><a class="thumbnail" href="/Information/Certificates#2"><img src="http://www.sng.perm.ru/big/lc.jpg" /></a></li>'),
-	$('<li><a class="thumbnail" href="/Information/Certificates#3"><img src="http://www.sng.perm.ru/big/lcp.jpg" /></a></li>'),
-	$('<li><a class="thumbnail" href="/Information/Certificates#4"><img src="http://www.sng.perm.ru/big/sv.jpg" /></a></li>'),
-	$('<li><a class="thumbnail" href="/Information/Certificates#5"><img src="http://www.sng.perm.ru/big/lci.jpg" /></a></li>'),
-	$('<li><a class="thumbnail" href="/Information/Certificates#6"><img src="http://www.sng.perm.ru/big/se.jpg" /></a></li>')
+	{ href: "/Information/Certificates#1", src: "http://www.sng.perm.ru/big/se.jpg" },
+	{ href: "/Information/Certificates#2", src: "http://www.sng.perm.ru/big/lc.jpg" },
+	{ href: "/Information/Certificates#3", src: "http://www.sng.perm.ru/big/lcp.jpg" },
+	{ href: "/Information/Certificates#4", src: "http://www.sng.perm.ru/big/sv.jpg" },
+	{ href: "/Information/Certificates#5", src: "http://www.sng.perm.ru/big/lci.jpg" },
+	{ href: "/Information/Certificates#6", src: "http://www.sng.perm.ru/big/se.jpg" }
 ];
+var partnersLogos = [
+	{ href: "#", src: "content/img/LOGO-arcticgaz.png" },
+	{ href: "#", src: "content/img/LOGO-transneft.png" },
+	{ href: "#", src: "content/img/LOGO - logo_rosneft.png" },
+	{ href: "#", src: "content/img/LOGO - samaraneftegaz.png" },
+	{ href: "#", src: "content/img/LOGO - severneftegazprom.png" },
+	{ href: "#", src: "content/img/LOGO - stroitransgas.png" },
+	{ href: "#", src: "content/img/LOGO SSC.png" }
+]
 
 //random certificates for home page
-function renderRandomCertificates() {
-	var randomCertificates = jQuery(certificates).get().sort(function () {
+function renderRandomImages(array, $jqObject, amount) {
+	var randomImages = jQuery(array).get().sort(function () {
 		return Math.round(Math.random()) - 0.5
-	}).slice(0, 4);
-	randomCertificates.forEach(function (item) {
-		$('.thumbnails-tiny').append(item);
+	}).slice(0, amount);
+	randomImages.forEach(function (item) {
+		$jqObject.append(
+			$('<li />')
+			.append($('<a />', {
+				'class': 'thumbnail',
+				'href': item.href
+			})
+				.append($('<img />', {
+					'src': item.src
+				})))
+			);
 	});
 }
 
+//some shit there
+
 $(function () {
+
+	var w = $(window);
+
+	// add a custom ":inView" selector
+	$.expr[':'].inView = function (obj) {
+		var $this = $(obj);
+		var relY = $this.offset().top - w.scrollTop();
+		return relY >= 0 && relY <= w.height();
+	};
+
+	$.fn.visibilityChange = function (fun) {
+		return this.each(function () {
+			var elem = $(this);
+			var pVisible = elem.is(":inView");
+			$(document).scroll(function (e) {
+				if (pVisible != elem.is(":inView")) {
+					pVisible = !pVisible;
+					fun(pVisible);
+				}
+			});
+		});
+	};
 
 	//modals for certificates
 	$('#certificates-big a').click(function () {
@@ -103,12 +144,16 @@ $(function () {
 			$('#home-canvas-main').animate({ margin: 0, left: -925 });
 			$(this).removeClass('left')
 				.addClass('right');
+			$(this).find('.switcher-arrow').removeClass('left')
+				.addClass('right');
 			$('.carousel-control').show();
 			$("#content-canvas").css("overflow-y", "hidden");
 		}
 		else {
 			$('#home-canvas-main').animate({ 'margin-left': $('#home-canvas-main').width() / 4, left: 0 });
 			$(this).removeClass('right')
+				.addClass('left');
+			$(this).find('.switcher-arrow').removeClass('right')
 				.addClass('left');
 			$('.carousel-control').hide();
 			$("#content-canvas").css("overflow-y", "auto");
@@ -140,9 +185,6 @@ $(function () {
 		$('.navigation-footer li').removeClass('active');
 	});
 
-	//random certificate for sidebar
-	$('#certificate-small').append(certificates[Math.floor(Math.random() * certificates.length)]);
-
 	//changing accordion-item chevron
 	$('.accordion-body')
 	.on('hide', function () {
@@ -172,7 +214,7 @@ $(function () {
 	$('#sub-navigation-projects ul li a').click(function () {
 		//$(this).parent('li').addClass('active');
 		var $targetCollapseElement = $($(this).attr('href') + '-collapse')
-		$targetCollapseElement.collapse('toggle');
+		$targetCollapseElement.collapse('show');
 	});
 
 });
