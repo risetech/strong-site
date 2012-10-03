@@ -84,6 +84,12 @@ textarea {
 }
 
 /**/
+
+.container-header-custom
+{
+	min-width: 1170px;
+}
+
 #header-canvas {
 	width: 100%;
 	height: 45px;
@@ -132,6 +138,7 @@ textarea {
 
 #navigation-header {
 	margin: 10px 10px 10px 0;
+	min-width: 1000px;
 }
 
 	#navigation-header li {
