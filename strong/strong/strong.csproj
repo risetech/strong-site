@@ -222,6 +222,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\Fonts\PERMIANSERIFTYPEFACE.OTF" />
     <Content Include="Content\Fonts\PERMIANSANSTYPEFACE.OTF" />
+    <None Include="Properties\PublishProfiles\localPublish.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\App.js" />
     <Content Include="Scripts\bootstrap-all.js" />

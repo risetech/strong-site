@@ -69,31 +69,7 @@ function renderRandomImages(array, $jqObject, amount) {
 
 //
 
-//$(function () {
-
-//	var w = $(window);
-
-//	// add a custom ":inView" selector
-//	$.expr[':'].inView = function (obj) {
-//		var $this = $(obj);
-//		var relY = $this.offset().top - w.scrollTop();
-//		return relY >= 0 && relY <= w.height();
-//	};
-
-//	$.fn.visibilityChange = function (fun) {
-//		return this.each(function () {
-//			var elem = $(this);
-//			var pVisible = elem.is(":inView");
-//			$(document).scroll(function (e) {
-//				if (pVisible != elem.is(":inView")) {
-//					pVisible = !pVisible;
-//					fun(pVisible);
-//				}
-//			});
-//		});
-//	};
-
-//	//
+$(function () {
 
 	//modals for certificates
 	$('#certificates-big a').click(function () {
