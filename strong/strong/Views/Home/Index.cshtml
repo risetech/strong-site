@@ -2,16 +2,58 @@
 	ViewBag.Title = "Домашняя страница";
 	Layout = @Url.Content("/Views/Shared/_Layout.cshtml");
 }
+<div class="map-wrapper">
+	<div class="map">
+		<div class="map-close" onclick="hideMap()"></div>
+		<img src="~/Content/img/misc/2000px-regions.png" />
+		<div class="map-city" id="jaroslavl" data-original-title="Ярославль"></div>
+		<div class="map-city" id="bratsk" data-common-source="blt" data-common-title="Братск, Ленск, Тында" data-original-title="Братск"></div>
+		<div class="map-city" id="samara" data-original-title="Самара"></div>
+		<div class="map-city" id="lensk" data-common-source="blt" data-common-title="Братск, Ленск, Тында" data-original-title="Ленск"></div>
+		<div class="map-city" id="uhta" data-original-title="Ухта"></div>
+		<div class="map-city" id="tynda" data-common-source="blt" data-common-title="Братск, Ленск, Тында" data-original-title="Тында"></div>
+		<div class="map-city" id="urengoy" data-original-title="Новый уренгой"></div>
+		<div class="map-city" id="peterburg" data-original-title="Санкт-Петербург"></div>
+		<div class="map-city" id="tarko" data-original-title="Тарко-Сале"></div>
+		<div class="map-city" id="ulakan" data-original-title="Улакан"></div>
+		<div class="map-city" id="nahodka" data-common-source="vsto" data-common-title="Находка, Хабаровск, Биробиджан, Благовещенск" data-original-title="Находка"></div>
+		<div class="map-city" id="blagoveshensk" data-common-source="vsto" data-common-title="Находка, Хабаровск, Биробиджан, Благовещенск" data-original-title="Благовещенск"></div>
+		<div class="map-city" id="birobidjan" data-common-source="vsto" data-common-title="Находка, Хабаровск, Биробиджан, Благовещенск" data-original-title="Биробиджан"></div>
+		<div class="map-city" id="krasnoyarsk" data-common-source="vankor" data-common-title="Красноярск, Норильск" data-original-title="Красноярск"></div>
+		<div class="map-city" id="norilsk" data-common-source="vankor" data-common-title="Красноярск, Норильск" data-original-title="Норильск"></div>
+		<div class="map-city" id="tobolsk" data-original-title="Тобольск"></div>
+		<div class="map-city" id="perm" data-original-title="Пермь"></div>
+		<div class="map-city" id="astrahan" data-original-title="Астрахань"></div>
+		<div class="map-city" id="kazan" data-original-title="Казань"></div>
+		<div class="map-city" id="chelny" data-original-title="Набережные Челны"></div>
+		<div class="map-city" id="kotlas" data-original-title="Котлас"></div>
+		<div class="map-city" id="nefteugansk" data-original-title="Нефтеюганск"></div>
+		<div class="map-city" id="habarovsk" data-common-source="vsto" data-common-title="Находка, Хабаровск, Биробиджан, Благовещенск" data-original-title="Хабаровск"></div>
+		<div class="map-city" id="tumen" data-original-title="Тюмень"></div>
+	</div>
+</div>
 <div id="slides-canvas" class="carousel slide">
 	<div class="carousel-inner">
 		<div class="item active">
-			<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/en/2011/08/background-the-environment_20110822.jpg.1200x800_q85_box-280%2C100%2C1000%2C820_crop_detail.jpg" />
+			<img src="~/Content/img/slider2.jpg" />
 		</div>
 		<div class="item">
-			<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/08/000_bg_29_3133_20110822.jpg.1200x800_q85_box-63%2C0%2C913%2C850_crop_detail.jpg" />
+			<img src="~/Content/img/slider1.jpg" />
 		</div>
 		<div class="item">
-			<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/en/2011/08/background-the-environment_20110822.jpg.1200x800_q85_box-280%2C100%2C1000%2C820_crop_detail.jpg" />
+			<img src="~/Content/img/slider3.jpg" />
+		</div>
+		<div class="item">
+			<img src="~/Content/img/slider4.jpg" />
+		</div>
+		<div class="item">
+			<img src="~/Content/img/slider5.jpg" />
+		</div>
+		<div class="item">
+			<img src="~/Content/img/slider6.jpg" />
+		</div>
+		<div class="item">
+			<img src="~/Content/img/slider7.jpg" />
 		</div>
 	</div>
 	<a class="carousel-control left" href="#slides-canvas" data-slide="prev">&lsaquo;</a>
@@ -29,37 +71,46 @@
 					<a href="javascript:;">2</a>
 					<a href="javascript:;">3</a>
 					<a href="javascript:;">4</a>
+					<a href="javascript:;">5</a>
 				</div>
 				<div id="slideshow-slides">
 					<div class="slideshow-slide active">
-						<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/09/environment-teaser_3234_20110929.jpg.616x328_q85_crop.jpg" />
+						<img src="~/Content/img/slideshow/slideshow1.jpg" />
 						<div class="caption-inner">
-							<h2>Технический надзор</h2>
-							<h4>Строительный контроль всего цикла выполняемых работ</h4>
+							<h2>Строительный контроль</h2>
+							<h4>Проверка соответствия выполняемых работ проектно-сметной документации, требованиям технических регламентов, строительных норм и правил</h4>
 							<a href="~/About/Maintenance">Подробнее</a>
 						</div>
 					</div>
 					<div class="slideshow-slide">
-						<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/09/nord-stream_castoro10_lubmin_020810__mg_8466_3223_20110928.jpg.616x328_q85_crop.jpg" />
+						<img src="~/Content/img/slideshow/slideshow2.jpg" />
 						<div class="caption-inner">
 							<h2>Строительный инжиниринг</h2>
-							<h4>Инженерное обеспечение строительства промышленных объектов</h4>
+							<h4>Организация строительного производства по договору с Генеральным подрядчиком</h4>
 							<a href="~/About/Engineering">Подробнее</a>
 						</div>
 					</div>
 					<div class="slideshow-slide">
-						<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/08/teaser-energy-for-your-life_3137_20110822.jpg.616x328_q85_crop.jpg" />
+						<img src="~/Content/img/slideshow/slideshow3.jpg" />
 						<div class="caption-inner">
-							<h2>Подготовка и аттестация персонала</h2>
-							<h4>Подготовка специалистов по всему циклу инженерных работ</h4>
+							<h2>Контроль сварных соединений</h2>
+							<h4>Неразрушающий контроль сварных соединений и изоляции оборудования и трубопроводов</h4>
 							<a href="~/About/Attestation">Подробнее</a>
 						</div>
 					</div>
 					<div class="slideshow-slide">
-						<img src="http://www.nord-stream.com/media/thumbs/picture_library/rgb_small/ru/2011/09/c6_handsahekeslite-080410_275o8708_3224_20110928.jpg.616x328_q85_crop.jpg" />
+						<img src="~/Content/img/slideshow/slideshow5.jpg" />
 						<div class="caption-inner">
 							<h2>Экспертиза промышленной безопасности</h2>
-							<h4>Оценка документов, технических устройств, зданий и сооружений</h4>
+							<h4>Оценка соответствия проектной докуменатции, технических устройств, зданий и сооружений требованиям промышленной безопасности</h4>
+							<a href="~/About/Expertise">Подробнее</a>
+						</div>
+					</div>
+					<div class="slideshow-slide">
+						<img src="~/Content/img/slideshow/slideshow4.jpg" />
+						<div class="caption-inner">
+							<h2>Подготовка и аттестация персонала</h2>
+							<h4>Учебный центр по подготовке и аттестации инженерно-технического персонала опасных производственных объектов</h4>
 							<a href="~/About/Expertise">Подробнее</a>
 						</div>
 					</div>
@@ -70,49 +121,27 @@
 					<a href="~/Information/Certificates">
 						<h2>Лицензии и сертификаты</h2>
 					</a>
-					<ul id="certificates" class="thumbnails thumbnails-tiny">
+					<ul id="certificates" class="thumbnails thumbnails-tiny thumbnails-certificates">
 					</ul>
 				</div>
-				<div class="home-teaser" onclick="document.location.href='/'">
+				<div class="home-teaser" onclick="showMap()">
 					<h2>Наша география</h2>
 					<div id="map-image"></div>
 				</div>
 				<div class="home-teaser">
-					<a href="#">
-						<h2>Наши партнеры</h2>
+					<a href="~/Information/Reviews">
+						<h2>Отзывы</h2>
 					</a>
-					<ul id="partners-logos" class="thumbnails thumbnails-tiny">
+					<ul id="reviews" class="thumbnails thumbnails-tiny thumbnails-certificates">
 					</ul>
 				</div>
 			</div>
-			@*<div id="home-widgets">
-				<div class="home-widget-box" id="presence-map">
-					<img src="http://www.amcomp.ru/i/map.gif" width="100%" height="100%" />
-				</div>
-				<div class="home-widget-box" id="partners">
-					<div class="partner-images">
-						<h1>Наши партнеры</h1>
-						<div class="partner-image">
-							<img src="http://www.amcomp.ru/img/banners/1.jpg" border="0" alt="ОАО «ФСК ЕЭС»">
-						</div>
-						<div class="partner-image">
-							<img src="http://www.amcomp.ru/img/banners/1.jpg" border="0" alt="ОАО «ФСК ЕЭС»">
-						</div>
-						<div class="partner-image">
-							<img src="http://www.amcomp.ru/img/banners/1.jpg" border="0" alt="ОАО «ФСК ЕЭС»">
-						</div>
-						<div class="partner-image">
-							<img src="http://www.amcomp.ru/img/banners/1.jpg" border="0" alt="ОАО «ФСК ЕЭС»">
-						</div>
-					</div>
-				</div>
-			</div>*@
 		</div>
 	</div>
 </div>
 <script>
 	$(function () {
-		renderRandomImages(certificates, $('#certificates'), 4);
-		renderRandomImages(partnersLogos, $('#partners-logos'), 3);
+		renderImages(certificates, $('#certificates'), 4, true);
+		renderImages(reviews, $('#reviews'), 4, true);
 	});
 </script>

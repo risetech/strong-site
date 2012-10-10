@@ -1,12 +1,9 @@
 ﻿@{
-	ViewBag.Title = "Сертификаты";
+	ViewBag.Title = "Лицензии и сертификаты";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="modal hide fade" id="modal-certificate">
-	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<h3></h3>
-	</div>
+<div class="modal hide fade" id="modal-content">
+	<div class="modal-header"></div>
 	<div class="modal-body">
 	</div>
 	<div class="modal-footer">
@@ -23,33 +20,68 @@
 					<div class="sub-content-main">
 						<ul class="thumbnails" id="certificates-big">
 							<li>
-								<a title="Лицензия1" data-index="1" href="javascript:;" class="thumbnail">
-									<img src="http://www.sng.perm.ru/big/se.jpg" />
+								<a data-index="1" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert1.jpg" />
 								</a>
 							</li>
 							<li>
-								<a title="Лицензия2" data-index="2" href="javascript:;" class="thumbnail">
-									<img src="http://www.sng.perm.ru/big/lc.jpg" />
+								<a data-index="2" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert2.jpg" />
 								</a>
 							</li>
 							<li>
-								<a title="Лицензия3" data-index="3" href="javascript:;" class="thumbnail">
-									<img src="http://www.sng.perm.ru/big/lcp.jpg" />
+								<a data-index="3" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert3.jpg" />
 								</a>
 							</li>
 							<li>
-								<a title="Лицензия4" data-index="4" href="javascript:;" class="thumbnail">
-									<img src="http://www.sng.perm.ru/big/sv.jpg" />
+								<a data-index="4" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert4.jpg" />
 								</a>
 							</li>
 							<li>
-								<a title="Лицензия5" data-index="5" href="javascript:;" class="thumbnail">
-									<img src="http://www.sng.perm.ru/big/lci.jpg" />
+								<a data-index="5" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert5.jpg" />
 								</a>
 							</li>
 							<li>
-								<a title="Лицензия6" data-index="6" href="javascript:;" class="thumbnail">
-									<img src="http://www.sng.perm.ru/big/se.jpg" />
+								<a data-index="6" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert6.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="7" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert7.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="8" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert8.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="9" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert9.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="10" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert10.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="11" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert11.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="12" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert12.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="13" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/certificates/cert13.jpg" />
 								</a>
 							</li>
 						</ul>
@@ -64,7 +96,7 @@
 	$(function () {
 		var index = location.hash.substring(1);
 		if (index) {
-			showCertificateModal($('a[data-index=' + index + ']'));
+			showModal($('a[data-index=' + index + ']'));
 			history.pushState('', document.title, window.location.pathname);
 			e.preventDefault();
 		}

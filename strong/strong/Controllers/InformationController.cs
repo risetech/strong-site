@@ -26,22 +26,22 @@ namespace strong.Controllers
 			return View();
 		}
 
-		public ActionResult Equipment()
-		{
-			return View();
-		}
-
 		public ActionResult Requisites()
 		{
 			return View();
 		}
 
-		public ActionResult History()
+		public ActionResult Certificates()
 		{
 			return View();
 		}
 
-		public ActionResult Certificates()
+		public ActionResult Partners()
+		{
+			return View();
+		}
+
+		public ActionResult Reviews()
 		{
 			return View();
 		}

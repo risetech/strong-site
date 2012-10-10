@@ -4,15 +4,13 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>@ViewBag.Title</title>
-	<link rel="stylesheet" href="~/Content/bootstrap.css" />
 	@Styles.Render("~/Content/css")
-	@Scripts.Render("~/bundles/modernizr")
-	<script src="~/Scripts/jquery-1.7.1.js"></script>
-	<script src="~/Scripts/bootstrap-all.js" type="text/javascript"></script>
-	<script src="~/Scripts/App.js" type="text/javascript"></script>
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/jqueryui")
+	@Scripts.Render("~/bundles/js")
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-static-top">
+	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container container-header-custom">
 				<ul class="nav" id="navigation-header">
@@ -20,10 +18,9 @@
 					<li data-href="Information"><a href="~/Information">О компании</a></li>
 					<li data-href="About"><a href="~/About">Деятельность</a></li>
 					<li data-href="Projects"><a href="~/Projects">Проекты</a></li>
-					<li style="padding-left: 103px; padding-top: 2px;">
+					<li style="padding-left: 89px; padding-top: 2px;">
 						<a href="http://strong.rise-tech.com" target="_blank" class="btn btn-custom">Корпоративный<br />
 							портал</a>
-						@*<button class="btn btn-custom">Корпоративный портал</button>*@
 					</li>
 				</ul>
 			</div>
@@ -43,9 +40,9 @@
 				<div class="column-section">
 					<h3><a href="~/Information">О компании</a></h3>
 					<ul>
-						<li><a href="~/Information/History">История компании</a></li>
-						<li><a href="~/Information/Certificates">Сертификаты</a></li>
-						<li><a href="~/Information/Equipment">Техническая оснащенность</a></li>
+						<li><a href="~/Information/Certificates">Лицензии и сертификаты</a></li>
+						<li><a href="~/Information/Partners">Наши партнеры</a></li>
+						<li><a href="~/Information/Reviews">Отзывы</a></li>
 						<li><a href="~/Information/Jobs">Вакансии</a></li>
 						<li><a href="~/Information/Requisites">Реквизиты</a></li>
 						<li><a href="~/Information/Contacts">Контакты</a></li>
@@ -56,16 +53,14 @@
 					<ul>
 						<li><a href="~/About/Management">Технический надзор</a></li>
 						<li><a href="~/About/Responsibility">Строительное производство</a></li>
-						<li><a href="~/About/Expertise">Экспертиза промышленной деятельности</a></li>
+						<li><a href="~/About/Expertise">Экспертиза промышленной безопасности</a></li>
 						<li><a href="~/About/Contribution">Подготовка и аттестация персонала</a></li>
 					</ul>
 				</div>
 				<div class="column-section">
 					<h3><a href="~/Projects">Проекты</a></h3>
 					<ul>
-						<li><a href="~/Projects#engineering">Инжиниринговые услуги</a></li>
-						<li><a href="~/Projects#control">Строительный контроль по договору с заказчиком</a></li>
-						<li><a href="~/Projects#maintenance">Технический надзор</a></li>
+						<li><a href="~/Projects">Производственная деятельность</a></li>
 					</ul>
 				</div>
 			</div>

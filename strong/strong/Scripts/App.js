@@ -1,4 +1,21 @@
-﻿//slideshow timer change
+﻿//map work
+function showMap() {
+	$('.map-wrapper').show()
+		.animate({ opacity: 1 }, 'slow');
+	$('head').append('<link rel="stylesheet" href="../Content/user-scrollbar.css" />')
+			.append('<script src="../Scripts/map_descriptions.js"></script>');
+}
+
+function hideMap() {
+	$('.map-wrapper').animate({ opacity: 0 }, {
+		duration: 'slow',
+		complete: function () {
+			$(this).hide();
+		}
+	});
+}
+
+//slideshow timer change
 var slideshowTimer = setInterval(function () { nextSlideshowSlide() }, 10000);
 function nextSlideshowSlide() {
 	var slidesCount = $('#slideshow-slides .slideshow-slide').length;
@@ -23,46 +40,79 @@ function nextSlideshowSlide() {
 }
 
 //modal-certificate
-function showCertificateModal(sender) {
-	$('#modal-certificate .modal-header h3').text(sender.attr('title'));
-	$('#modal-certificate .modal-body').empty()
+function showModal(sender) {
+	$('#modal-content .modal-body').empty()
 										.append('<img src=' + sender.children().attr('src') + ' />')
-	$('#modal-certificate').modal();
+	$('#modal-content').modal();
 }
 
+var reviews = [
+	{ href: "/Information/Reviews#1", src: "/Content/img/reviews/pic1.jpg" },
+	{ href: "/Information/Reviews#2", src: "/Content/img/reviews/pic2.jpg" },
+	{ href: "/Information/Reviews#3", src: "/Content/img/reviews/pic3.jpg" },
+	{ href: "/Information/Reviews#4", src: "/Content/img/reviews/pic4.jpg" },
+	{ href: "/Information/Reviews#5", src: "/Content/img/reviews/pic5.jpg" },
+	{ href: "/Information/Reviews#6", src: "/Content/img/reviews/pic6.jpg" },
+	{ href: "/Information/Reviews#7", src: "/Content/img/reviews/pic7.jpg" },
+	{ href: "/Information/Reviews#8", src: "/Content/img/reviews/pic8.jpg" },
+	{ href: "/Information/Reviews#9", src: "/Content/img/reviews/pic9.jpg" },
+	{ href: "/Information/Reviews#10", src: "/Content/img/reviews/pic10.jpg" },
+	{ href: "/Information/Reviews#11", src: "/Content/img/reviews/pic11.jpg" }
+]
+
 var certificates = [
-	{ href: "/Information/Certificates#1", src: "http://www.sng.perm.ru/big/se.jpg" },
-	{ href: "/Information/Certificates#2", src: "http://www.sng.perm.ru/big/lc.jpg" },
-	{ href: "/Information/Certificates#3", src: "http://www.sng.perm.ru/big/lcp.jpg" },
-	{ href: "/Information/Certificates#4", src: "http://www.sng.perm.ru/big/sv.jpg" },
-	{ href: "/Information/Certificates#5", src: "http://www.sng.perm.ru/big/lci.jpg" },
-	{ href: "/Information/Certificates#6", src: "http://www.sng.perm.ru/big/se.jpg" }
+	{ href: "/Information/Certificates#1", src: "/Content/img/certificates/cert1.jpg" },
+	{ href: "/Information/Certificates#2", src: "/Content/img/certificates/cert2.jpg" },
+	{ href: "/Information/Certificates#3", src: "/Content/img/certificates/cert3.jpg" },
+	{ href: "/Information/Certificates#4", src: "/Content/img/certificates/cert4.jpg" },
+	{ href: "/Information/Certificates#5", src: "/Content/img/certificates/cert5.jpg" },
+	{ href: "/Information/Certificates#6", src: "/Content/img/certificates/cert6.jpg" },
+	{ href: "/Information/Certificates#7", src: "/Content/img/certificates/cert7.jpg" },
+	{ href: "/Information/Certificates#8", src: "/Content/img/certificates/cert8.jpg" },
+	{ href: "/Information/Certificates#9", src: "/Content/img/certificates/cert9.jpg" },
+	{ href: "/Information/Certificates#10", src: "/Content/img/certificates/cert10.jpg" },
+	{ href: "/Information/Certificates#11", src: "/Content/img/certificates/cert11.jpg" },
+	{ href: "/Information/Certificates#12", src: "/Content/img/certificates/cert12.jpg" },
+	{ href: "/Information/Certificates#13", src: "/Content/img/certificates/cert13.jpg" }
 ];
+
 var partnersLogos = [
-	{ href: "#", src: "content/img/LOGO-arcticgaz.png" },
-	{ href: "#", src: "content/img/LOGO-transneft.png" },
-	{ href: "#", src: "content/img/LOGO - logo_rosneft.png" },
-	{ href: "#", src: "content/img/LOGO - samaraneftegaz.png" },
-	{ href: "#", src: "content/img/LOGO - severneftegazprom.png" },
-	{ href: "#", src: "content/img/LOGO - stroitransgas.png" },
-	{ href: "#", src: "content/img/LOGO SSC.png" }
+	{ href: "http://gde24.ru/company/card/BgHDrptc561uS6yno8JauNPr", target: "_blank", src: "../content/img/logos/LOGO-arcticgaz(BW).png", src_hovered: "../content/img/logos/LOGO-arcticgaz(CLR).png" },
+	{ href: "http://www.transneft.ru", target: "_blank", src: "../content/img/logos/LOGO-transneft(BW).png", src_hovered: "../content/img/logos/LOGO-transneft(CLR).png" },
+	{ href: "http://www.rosneft.ru", target: "_blank", src: "../content/img/logos/LOGO - logo_rosneft(BW).png", src_hovered: "../content/img/logos/LOGO - logo_rosneft(CLR).png" },
+	{ href: "http://www.samaraneftgaz.ru", target: "_blank", src: "../content/img/logos/LOGO - samaraneftegaz (BW).png", src_hovered: "../content/img/logos/LOGO - samaraneftegaz (CLR).png" },
+	{ href: "http://severneftegazprom.com", target: "_blank", src: "../content/img/logos/LOGO - severneftegazprom (BW).png", src_hovered: "../content/img/logos/LOGO - severneftegazprom (CLR).png" },
+	{ href: "http://www.stroytransgaz.ru", target: "_blank", src: "../content/img/logos/LOGO - stroitransgas (BW).png", src_hovered: "../content/img/logos/LOGO - stroitransgas (CLR).png" },
+	{ href: "http://www.seversc.ru/main", target: "_blank", src: "../content/img/logos/LOGO SSC (BW).png", src_hovered: "../content/img/logos/LOGO SSC (CLR).png" }
 ]
 
 //random certificates for home page
-function renderRandomImages(array, $jqObject, amount) {
-	var randomImages = jQuery(array).get().sort(function () {
-		return Math.round(Math.random()) - 0.5
-	}).slice(0, amount);
-	randomImages.forEach(function (item) {
+function renderImages(array, $jqObject, amount, isRandom) {
+	if (isRandom) {
+		var images = jQuery(array).get().sort(function () {
+			return Math.round(Math.random()) - 0.5
+		}).slice(0, amount);
+	}
+	else {
+		var images = array;
+	}
+	images.forEach(function (item) {
 		$jqObject.append(
 			$('<li />')
 			.append($('<a />', {
 				'class': 'thumbnail',
-				'href': item.href
+				'href': item.href,
+				'target': item.target
 			})
 				.append($('<img />', {
 					'src': item.src
-				})))
+				}).mouseenter(function () {
+					$(this).attr('src', item.src_hovered);
+				})
+				.mouseleave(function () {
+					$(this).attr('src', item.src);
+				})
+				))
 			);
 	});
 }
@@ -71,9 +121,61 @@ function renderRandomImages(array, $jqObject, amount) {
 
 $(function () {
 
-	//modals for certificates
-	$('#certificates-big a').click(function () {
-		showCertificateModal($(this));
+	$('#home-canvas-main').parent().css('overflow', 'auto')
+
+	$('.map-city').tooltip();
+
+	$('.map-city').click(function () {
+		var $this = $(this);
+		var source = $this.data('common-source') ? $this.data('common-source') : $this.attr('id');
+		if (!($('#' + source + "-modal").length)) {
+			var description = getDescription(source);
+			var $modal = $('<div />',
+				{
+					"class": "modal hide fade city-modal",
+					"id": source + '-modal',
+				});
+			var modalTitle = $this.data('common-title') ? $this.data('common-title') : $this.data('original-title');
+			$modal.append('<div class="modal-header"><button type="button" class="close close-custom" data-dismiss="modal" aria-hidden="true">×</button><h3>' + modalTitle + '</h3></div>');
+			if (description.projects) {
+				$modal.append('<div class="modal-body"><div class="pagination pagination-centered"><ul></ul></div><div class="iframe-container"></div><ul class="thumbnails thumbnails-modal"></ul></div>');
+				description.projects.forEach(function (item, idx) {
+					var $tmpl = $('<li><a href=javascript:;>' + (idx + 1) + '</a></li>');
+					$modal.find('.pagination ul').append($tmpl);
+					$tmpl.click(function () {
+						$modal.find('.pagination ul li').removeClass('active');
+						$(this).addClass('active');
+						var $iframeContainer = $modal.find('.iframe-container')
+						$iframeContainer.empty();
+						$modal.find('.thumbnails').empty();
+						$modal.find('.iframe-container').load('..' + item.text);
+						item.photos.forEach(function (item) {
+							$modal.find('.thumbnails').append('<li><a href="javascript:;" class="thumbnail"><img src=' + item + ' /></a></li>')
+						});
+						return false;
+					});
+				});
+			}
+			else {
+				$modal.append('<div class="modal-body"><div class="iframe-container"></div><ul class="thumbnails thumbnails-modal"></ul></div>');
+				$modal.find('.iframe-container').load('..' + description.text);
+				description.photos.forEach(function (item) {
+					$modal.find('.thumbnails').append('<li><a href="javascript:;" class="thumbnail"><img src=' + item + ' /></a></li>');
+				});
+			}
+			$modal.append('<div class="modal-footer"></div>');
+			$('body').append($modal);
+			$modal.modal('show');
+			$modal.find('.pagination ul li:nth-child(1)').click();
+		}
+		else {
+			$('#' + source + "-modal").modal('show');
+		}
+		$('.modal-backdrop').addClass('backdrop-custom');
+	});
+
+	$('#certificates-big a, #reviews-big a').click(function () {
+		showModal($(this));
 		return false;
 	});
 
@@ -119,6 +221,7 @@ $(function () {
 	//switching slides and content
 	$('.switcher').click(function () {
 		if ($(this).hasClass('left')) {
+			$('#home-canvas-main').data('marginLeft', $('#home-canvas-main').css('margin-left'));
 			$('#home-canvas-main').animate({ margin: 0, left: -925 });
 			$(this).removeClass('left')
 				.addClass('right');
@@ -128,7 +231,7 @@ $(function () {
 			$("#content-canvas").css("overflow-y", "hidden");
 		}
 		else {
-			$('#home-canvas-main').animate({ 'margin-left': $('#home-canvas-main').width() / 4, left: 0 });
+			$('#home-canvas-main').animate({ 'margin-left': $('#home-canvas-main').data('marginLeft'), left: 0 });
 			$(this).removeClass('right')
 				.addClass('left');
 			$(this).find('.switcher-arrow').removeClass('right')

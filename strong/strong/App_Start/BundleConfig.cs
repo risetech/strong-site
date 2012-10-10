@@ -23,7 +23,11 @@ namespace strong
 			bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
 						"~/Scripts/modernizr-*"));
 
-			bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+			bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/bootstrap.css",
+				"~/Content/site.css",
+				"~/Content/jquery.mCustomScrollbar.css"));
+
+			bundles.Add(new StyleBundle("~/Content/user-scrollbar").Include("~/Content/user-scrollbar.css"));
 
 			bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
 						"~/Content/themes/base/jquery.ui.core.css",
@@ -38,6 +42,11 @@ namespace strong
 						"~/Content/themes/base/jquery.ui.datepicker.css",
 						"~/Content/themes/base/jquery.ui.progressbar.css",
 						"~/Content/themes/base/jquery.ui.theme.css"));
+			bundles.Add(new ScriptBundle("~/bundles/js").Include("~/Scripts/App.js",
+				"~/Scripts/map_description.js",
+				"~/Scripts/bootstrap-all.js",
+				"~/Scripts/jquery.mousewheel.min.js",
+				"~/Scripts/jquery.mCustomScrollbar.js"));
 		}
 	}
 }

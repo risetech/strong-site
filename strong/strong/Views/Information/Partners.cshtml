@@ -1,0 +1,26 @@
+﻿@{
+	ViewBag.Title = "Наши партнеры";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_InformationBackgroundPartial");
+<div id="content-canvas">
+	<div class="home-canvas">
+		@Html.Partial("_InformationNavigationPartial")
+		<div class="sub-canvas">
+			<div class="sub-content-canvas">
+				<div class="sub-content">
+					<div class="sub-content-main">
+						<ul class="thumbnails" id="logos">
+						</ul>
+					</div>
+					@Html.Partial("_SideBarPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function () {
+		renderImages(partnersLogos, $('#logos'), partnersLogos.length, false);
+	});
+</script>

@@ -1,0 +1,94 @@
+﻿@{
+	ViewBag.Title = "Отзывы";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_InformationBackgroundPartial");
+<div class="modal hide fade" id="modal-content">
+	<div class="modal-header"></div>
+	<div class="modal-body">
+	</div>
+	<div class="modal-footer">
+		<button data-dismiss="modal" class="btn">Закрыть</button>
+	</div>
+</div>
+<div id="content-canvas">
+	<div class="home-canvas">
+		@Html.Partial("_InformationNavigationPartial")
+		<div class="sub-canvas">
+			<div class="sub-content-canvas">
+				<div class="sub-content">
+					<div class="sub-content-main">
+						<ul class="thumbnails" id="reviews-big">
+							<li>
+								<a data-index="1" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic1.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="2" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic2.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="3" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic3.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="4" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic4.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="5" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic5.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="6" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic6.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="7" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic7.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="8" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic8.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="9" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic9.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="10" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic10.jpg" />
+								</a>
+							</li>
+							<li>
+								<a data-index="11" href="javascript:;" class="thumbnail">
+									<img src="~/Content/img/reviews/pic11.jpg" />
+								</a>
+							</li>
+						</ul>
+					</div>
+					@Html.Partial("_SideBarPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function () {
+		var index = location.hash.substring(1);
+		if (index) {
+			showModal($('a[data-index=' + index + ']'));
+			history.pushState('', document.title, window.location.pathname);
+			e.preventDefault();
+		}
+	});
+</script>
