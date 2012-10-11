@@ -4,6 +4,12 @@ function showMap() {
 		.animate({ opacity: 1 }, 'slow');
 	$('head').append('<link rel="stylesheet" href="../Content/user-scrollbar.css" />')
 			.append('<script src="../Scripts/map_descriptions.js"></script>');
+	$(document).unbind('keydown').bind('keydown', function (event) {
+		if (event.keyCode === 8 || event.keyCode === 27) {
+			event.preventDefault();
+			hideMap();
+		}
+	});
 }
 
 function hideMap() {

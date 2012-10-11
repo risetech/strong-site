@@ -1082,6 +1082,12 @@ textarea {
 		background: url('/content/img/misc/cancel_circled.png') no-repeat;
 	}
 
+	.map-close div {
+		margin-top: 15px;
+		margin-left: -125px;
+		font-size: 18px;
+	}
+
 .city-modal {
 	background-color: black;
 	opacity: 0.92!important;

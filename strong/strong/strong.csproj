@@ -133,7 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\cancel.png" />
     <Content Include="Content\docs\astrahan.htm" />
     <Content Include="Content\docs\blt.htm" />
     <Content Include="Content\docs\jaroslavl.htm" />
@@ -299,21 +298,16 @@
     <Content Include="Content\img\slideshow\slideshow4.jpg" />
     <Content Include="Content\img\slideshow\slideshow1.jpg" />
     <Content Include="Content\img\slideshow\slideshow5.jpg" />
-    <Content Include="Content\img\smallpic.jpg" />
     <Content Include="Content\img\misc\small_arrow_left.png" />
     <Content Include="Content\img\misc\small_arrow_left_grey.png" />
     <Content Include="Content\img\misc\small_arrow_left_hinted.png" />
     <Content Include="Content\img\misc\small_arrow_right.png" />
     <Content Include="Content\img\misc\small_arrow_right_grey.png" />
     <Content Include="Content\img\misc\small_arrow_right_hinted.png" />
-    <Content Include="Content\jquery.mCustomScrollbar.css" />
-    <Content Include="Content\misc\Map_of_Russia.svg" />
-    <Content Include="Content\nord-style.css" />
     <Content Include="Content\img\pic_small.jpg" />
     <Content Include="Content\img\slider1.jpg" />
     <Content Include="Content\img\slider2.jpg" />
     <Content Include="Content\img\slider3.jpg" />
-    <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -371,8 +365,6 @@
     <Content Include="Content\user-scrollbar.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\Fonts\PERMIANSERIFTYPEFACE.OTF" />
-    <Content Include="Content\Fonts\PERMIANSANSTYPEFACE.OTF" />
     <Content Include="Content\docs\application_form.doc" />
     <None Include="Properties\PublishProfiles\localPublish.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
@@ -432,6 +424,7 @@
     <Content Include="Views\Shared\_Map.cshtml" />
     <Content Include="Views\Information\Partners.cshtml" />
     <Content Include="Views\Information\Reviews.cshtml" />
+    <Content Include="Views\About\Welding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -36,5 +36,10 @@ namespace strong.Views
 			return View();
 		}
 
+		public ActionResult Welding()
+		{
+			return View();
+		}
+
 	}
 }
