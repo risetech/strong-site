@@ -177,7 +177,7 @@ textarea {
 .navigation-footer li {
 	float: left;
 	list-style-type: none;
-	background: url('http://www.nord-stream.com/static/img/footer-separator.png') right 5px no-repeat;
+	background: url('img/misc/footer-separator.png') right 5px no-repeat;
 }
 
 	.navigation-footer li a {
@@ -533,7 +533,7 @@ textarea {
 		}
 
 			.breadcrump ul li + li::before {
-				content: url('http://www.nord-stream.com/static/img/breadcrumb-separator.png');
+				content: url('img/misc/breadcrumb-separator.png');
 				padding: 0 7px 0 4px;
 			}
 
@@ -698,7 +698,7 @@ textarea {
 	}
 
 .sidebar-item-contacts {
-	background: #D7D7D8 url('http://www.nord-stream.com/static/img/sidebar-gradient.png') top left repeat-y;
+	background: #D7D7D8 url('img/misc/sidebar-gradient.png') top left repeat-y;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	border: 3px solid white;
 	padding: 8px;
@@ -839,11 +839,17 @@ textarea {
 		width: 150px;
 	}
 
-.table-custom tr > td:nth-child(2) {
+.table-custom tr > td:nth-child(2), .table-custom tr > th:nth-child(2) {
 	vertical-align: middle;
+	width: 142px;
 }
 
-.table-custom tr > td:first-child span {
+	.table-custom tr > td:nth-child(2) p {
+		font-size: 12px;
+	}
+
+.table-custom tr > td p {
+	margin: 0;
 	color: brown;
 	font-size: 14px;
 }
@@ -875,6 +881,7 @@ textarea {
 
 .accordion-inner {
 	border: none;
+	/*padding: 9px 30px !important;*/
 }
 
 .accordion-group {
@@ -888,10 +895,6 @@ textarea {
 	margin-right: 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-}
-
-.accordion-inner {
-	padding: 9px 30px !important;
 }
 
 .accordion-toggle {
@@ -1059,12 +1062,12 @@ textarea {
 	-moz-border-radius: 500px;
 	border-radius: 500px;
 	border: 1px solid black;
-	background-color: #CCC;
+	background-color: #ff9024;
 	cursor: pointer;
 }
 
 	.map-city:hover {
-		background-color: red;
+		background-color: #F36206;
 	}
 
 .map-close {
@@ -1089,25 +1092,8 @@ textarea {
 	}
 
 .city-modal {
-	background-color: black;
 	opacity: 0.92!important;
-	color: white;
 }
-
-	.city-modal .modal-footer {
-		background-color: transparent;
-	}
-
-.close-custom {
-	opacity: 0.9;
-	color: white;
-	text-shadow: none;
-}
-
-	.close-custom:hover {
-		color: white;
-		opacity: 1;
-	}
 
 .pagination {
 	margin-bottom: 20px;
@@ -1119,15 +1105,17 @@ textarea {
 	}
 
 .tooltip {
-	z-index: 900000;
+	z-index: 1040;
+	opacity: 0.8!important;
 }
+
+	.tooltip:hover {
+		opacity: 1!important;
+		cursor: pointer;
+	}
 
 .backdrop-custom {
 	background: none;
-}
-
-.modal-body iframe {
-	width: 100%;
 }
 
 #jaroslavl {
@@ -1147,7 +1135,7 @@ textarea {
 
 #tynda {
 	top: 70%;
-	left: 74%;
+	left: 73.5%;
 }
 
 #tumen {
@@ -1261,4 +1249,8 @@ textarea {
 .description {
 	font-size: 12px;
 	line-height: 14px!important;
+}
+
+.small-line {
+	margin: 6px 0;
 }
