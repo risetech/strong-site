@@ -2,6 +2,11 @@
 function showMap() {
 	$('.map-wrapper').show()
 		.animate({ opacity: 1 }, 'slow');
+	$('.map-city').tooltip({ trigger: 'manual' })
+	.tooltip('show');
+	$('.tooltip').click(function () {
+		$('.map-city[data-original-title="' + $(this).text() + '"]').click();
+	});
 	$('head').append('<link rel="stylesheet" href="../Content/user-scrollbar.css" />')
 			.append('<script src="../Scripts/map_descriptions.js"></script>');
 	$(document).unbind('keydown').bind('keydown', function (event) {
@@ -13,6 +18,8 @@ function showMap() {
 }
 
 function hideMap() {
+	$('.tooltip').hide();
+	$('.map-city').tooltip('hide');
 	$('.map-wrapper').animate({ opacity: 0 }, {
 		duration: 'slow',
 		complete: function () {
@@ -128,8 +135,6 @@ function renderImages(array, $jqObject, amount, isRandom) {
 $(function () {
 
 	$('#home-canvas-main').parent().css('overflow', 'auto')
-
-	$('.map-city').tooltip();
 
 	$('.map-city').click(function () {
 		var $this = $(this);

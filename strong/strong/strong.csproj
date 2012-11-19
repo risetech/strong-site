@@ -247,9 +247,11 @@
     <Content Include="Content\img\map\vsto7.JPG" />
     <Content Include="Content\img\map\vsto8.JPG" />
     <Content Include="Content\img\map\vsto9.jpg" />
+    <Content Include="Content\img\misc\2000px-regions.png" />
+    <Content Include="Content\img\misc\breadcrumb-separator.png" />
     <Content Include="Content\img\misc\cancel.png" />
     <Content Include="Content\img\misc\cancel_circled.png" />
-    <Content Include="Content\img\misc\2000px-regions.png" />
+    <Content Include="Content\img\misc\footer-separator.png" />
     <Content Include="Content\img\misc\Map_of_Russia_Big.png" />
     <Content Include="Content\img\misc\arrow_white_left.png" />
     <Content Include="Content\img\misc\arrow_white_left_bigger.png" />
@@ -276,6 +278,7 @@
     <Content Include="Content\img\misc\background-dot.png" />
     <Content Include="Content\img\misc\Map_of_Russia.png" />
     <Content Include="Content\img\misc\Map_of_Russia_darkblue.png" />
+    <Content Include="Content\img\misc\sidebar-gradient.png" />
     <Content Include="Content\img\picpic.jpeg" />
     <Content Include="Content\img\reviews\pic1.jpg" />
     <Content Include="Content\img\reviews\pic10.jpg" />
