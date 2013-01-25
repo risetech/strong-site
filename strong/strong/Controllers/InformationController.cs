@@ -36,11 +36,6 @@ namespace strong.Controllers
 			return View();
 		}
 
-		public ActionResult Partners()
-		{
-			return View();
-		}
-
 		public ActionResult Reviews()
 		{
 			return View();
